@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-image: url('https://wallpaperset.com/w/full/f/b/7/427163.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 1px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 5vh 8vw;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+h2{
+  font-size: 2.5rem;
+  color: #ab6944;
+}
+span{
+  font-weight: 400;
+  font-style: italic;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.planet-link{
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+img{
+  width: 10vw;
+  height: auto;
+}
+p{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#moons span{
+  font-size: 0.9rem;
+}
+#name span{
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+.information{
+  text-transform: capitalize;
+}
+.link-photo{
+  color: gray;
+  font-size: 0.9rem;
+}
+span{
+  color: gray;
+  font-size: 1rem;
+}
+#title{
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-shadow: 4px 4px 10px rgb(20, 17, 114);
+}
+iframe{
+  border: none;
+}
+h3{
+  color: white;
+  font-size: 1.5rem;
+}
+a:hover{
+  text-decoration: underline;
+  scale: 1.1;
+}
+.active{
+  scale: 1.1;
+  text-decoration: underline;
+}
+@keyframes animatePlanet {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
 }
