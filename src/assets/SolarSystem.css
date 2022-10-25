@@ -15,9 +15,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
-.orbit .orbit {
-  animation-name: suborbit; 
-}
 .pos {
   position: absolute;
   top: 50%;
@@ -30,7 +27,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
-#sun, .planet, #terre .moon {
+#sun, .planet{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,7 +51,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
-/* --------------------------------------------------------------------------- planets index */
 #mercure {
   z-index: 10; 
 }
@@ -90,8 +86,6 @@
 #sun {
   z-index: 1; 
 }
-
-/* --------------------------------------------------------------------------- animations */
 @keyframes orbit {
   0% {
     transform: rotateZ(0deg); 
@@ -118,229 +112,161 @@
   100% {
     transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); 
   } }
-
-/* --------------------------------------------------------------------------- opening */
-.view-3D .opening #sun,
-.view-3D .opening .orbit,
-.view-3D .opening .pos,
-.view-3D .opening .planet,
-.view-3D .opening .satelite,
-.view-3D .opening .ring {
-  transition-duration: 4s; 
-}
-
-#universe.opening #sun {
-  box-shadow: 0 0 0 rgba(255, 160, 60, 0); 
-}
-/* --------------------------------------------------------------------------- 3D view */
-.view-3D.zoom-large #sun {
-  transform-style: preserve-3d; 
-}
-
-.view-3D.zoom-large .orbit {
-  transform-style: preserve-3d; 
-}
-
 .view-3D #solar-system {
   transform: rotateX(75deg); 
 }
-
 .view-3D #sun {
   transform: rotateX(-90deg); 
 }
-
-.view-3D .ring {
-  transform: rotateX(90deg); 
-}
-
-.view-3D .planet,
-.view-3D .moon {
+.view-3D .planet{
   transform: rotateX(0deg); 
 }
-
-/* --------------------------------------------------------------------------- data */
-/* --------------------------------------------------------------------------- speed */
-/* sideral years */
 #mercure .pos,
 #mercure .planet,
 #mercure.orbit {
   animation-duration: 2.89016s; 
 }
-
 #venus .pos,
 #venus .planet,
 #venus.orbit {
   animation-duration: 7.38237s; 
 }
-
 #terre .pos,
 #terre .planet,
 #terre.orbit {
   animation-duration: 12.00021s; 
 }
-
 #terre .orbit .pos,
 #terre .orbit {
   animation-duration: 0.89764s; 
 }
-
 #mars .pos,
 #mars .planet,
 #mars.orbit {
   animation-duration: 22.57017s; 
 }
-
 #jupiter .pos,
 #jupiter .planet,
 #jupiter.orbit {
   animation-duration: 142.35138s; 
 }
-
 #saturne .pos,
 #saturne .planet,
 #saturne.orbit,
 #saturne .ring {
   animation-duration: 353.36998s; 
 }
-
 #uranus .pos,
 #uranus .planet,
 #uranus.orbit {
   animation-duration: 1008.20215s; 
 }
-
 #neptune .pos,
 #neptune .planet,
 #neptune.orbit {
   animation-duration: 1977.49584s; 
 }
-
-/* --------------------------------------------------------------------------- planets sizes */
-/* --------------------------------------------------------------------------- stretched sizes */
 .scale-stretched #sun {
   font-size: 8em; 
 }
-
 .scale-stretched #mercure .planet {
   font-size: 1em; 
 }
-
 .scale-stretched #venus .planet {
   font-size: 2.2em; 
 }
-
 .scale-stretched #terre .planet {
   font-size: 2.7em; 
 }
-
 .scale-stretched #terre .moon {
   font-size: 0.9em; 
 }
-
 .scale-stretched #mars .planet {
   font-size: 1.9em; 
 }
-
 .scale-stretched #jupiter .planet {
   font-size: 8em; 
 }
-
 .scale-stretched #saturne .planet {
   font-size: 6.9em; 
 }
-
 .scale-stretched #uranus .planet {
   font-size: 3.1em; 
 }
-
 .scale-stretched #neptune .planet {
   font-size: 3.5em; 
 }
-
-
-/* --------------------------------------------------------------------------- stretched orbits */
 .scale-stretched #mercure.orbit {
   width: 16em;
   height: 16em;
   margin-top: -8em;
   margin-left: -8em; 
 }
-
 .scale-stretched #venus.orbit {
   width: 20em;
   height: 20em;
   margin-top: -10em;
   margin-left: -10em; 
 }
-
 .scale-stretched #terre.orbit {
   width: 26em;
   height: 26em;
   margin-top: -13em;
   margin-left: -13em; 
 }
-
 .scale-stretched #mars.orbit {
   width: 34em;
   height: 34em;
   margin-top: -17em;
   margin-left: -17em; 
 }
-
 .scale-stretched #jupiter.orbit {
   width: 50em;
   height: 50em;
   margin-top: -25em;
   margin-left: -25em; 
 }
-
 .scale-stretched #saturne.orbit {
   width: 70em;
   height: 70em;
   margin-top: -35em;
   margin-left: -35em; 
 }
-
 .scale-stretched #uranus.orbit {
   width: 80em;
   height: 80em;
   margin-top: -40em;
   margin-left: -40em; 
 }
-
 .scale-stretched #neptune.orbit {
   width: 90em;
   height: 90em;
   margin-top: -45em;
   margin-left: -45em; 
 }
-
-/* --------------------------------------------------------------------------- venus ; pos: Left */
 #venus .pos {
   left: 0;
   top: 50%; 
 }
-
 #venus .planet {
   animation-name: shadow-venus; 
 }
-
 @keyframes shadow-venus {
   0% {
     box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
-    /* LEFT */ }
+}
 
   25% {
     box-shadow: inset 22px -20px 10px rgba(0, 0, 0, 0.5);
-    /* BOTTOM */ }
+    }
 
   25.5% {
     box-shadow: inset -22px -20px 10px rgba(0, 0, 0, 0.5);
-    /* BOTTOM */ }
+    }
 
   50% {
     box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
-    /* RIGHT */ }
+    }
 
   75% {
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
@@ -350,16 +276,13 @@
     box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
     /* LEFT */ } 
 }
-/* --------------------------------------------------------------------------- earth ; pos: Right */
 #terre .pos {
   left: 100%;
   top: 50%; 
 }
-
 #terre .planet {
   animation-name: shadow-earth; 
 }
-
 @keyframes shadow-earth {
   0% {
     box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
@@ -385,22 +308,13 @@
     box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
     /* RIGHT */ } 
 }
-/* --------------------------------------------------------------------------- moon */
-#terre .orbit .pos {
-  left: 100%;
-  top: 50%; 
-}
-
-/* --------------------------------------------------------------------------- mars ; pos: Bottom */
 #mars .pos {
   left: 50%;
   top: 100%; 
 }
-
 #mars .planet {
   animation-name: shadow-mars; 
 }
-
 @keyframes shadow-mars {
   0% {
     box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.5);
@@ -426,16 +340,13 @@
     box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.5);
     /* BOTTOM */ } 
 }
-/* --------------------------------------------------------------------------- jupiter ; pos: Right */
 #jupiter .pos {
   left: 100%;
   top: 50%; 
 }
-
 #jupiter .planet {
   animation-name: shadow-jupiter; 
 }
-
 @keyframes shadow-jupiter {
   0% {
     box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.5);
@@ -461,16 +372,13 @@
     box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.5);
     /* RIGHT */ } 
 }
-/* --------------------------------------------------------------------------- saturne ; pos: Left */
 #saturne .pos {
   left: 0%;
   top: 50%; 
 }
-
 #saturne .planet {
   animation-name: shadow-saturne; 
 }
-
 @keyframes shadow-saturne {
   0% {
     box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.5);
@@ -496,16 +404,13 @@
     box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.5);
     /* LEFT */ } 
 }
-/* --------------------------------------------------------------------------- uranus ; pos: Left */
 #uranus .pos {
   left: 0;
   top: 50%; 
 }
-
 #uranus .planet {
   animation-name: shadow-uranus; 
 }
-
 @keyframes shadow-uranus {
   0% {
     box-shadow: inset 8px 0 5px rgba(0, 0, 0, 0.5);
@@ -531,17 +436,13 @@
     box-shadow: inset 8px 0 5px rgba(0, 0, 0, 0.5);
     /* LEFT */ } 
 }
-
-/* --------------------------------------------------------------------------- neptune ; pos: Top */
 #neptune .pos {
   left: 50%;
   top: 0; 
 }
-
 #neptune .planet {
   animation-name: shadow-neptune; 
 }
-
 @keyframes shadow-neptune {
   0% {
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
@@ -567,16 +468,6 @@
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
     /* TOP */ } 
   }
-
-  @keyframes animatePlanet {
-    0%{
-      background-position: 0%;
-    }
-    100%{
-      background-position: 100%;
-    }
-  }
-
 .planet:hover{
   cursor: pointer;
 }
