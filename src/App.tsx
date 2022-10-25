@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/solar-system' element={<Home/>} />
         <Route path='/photos' element={<Photos/>} />
         <Route path='/:planet' element={<Planets /> } />
         <Route path='/random' element={<Random /> } />

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <StyledHeader>
-      <Link to="/">Solar System</Link>
+      <Link to="/solar-system">Solar System</Link>
       <Link to="/photos">Photo of the day</Link>
       <Link to='/random'>Photo by date</Link>
     </StyledHeader>
