@@ -26,7 +26,7 @@ function PhotoOfDay() {
         <span>{photo.date}</span>
       </Title>
       <Content>
-        {photo.media_type == 'image'? <img src={photo.hdrel} alt='photo'/> : <iframe width="690" height="500"
+        {photo.media_type == 'image' ? <img src={photo.hdurl} alt='photo'/> : <iframe width="690" height="500"
         src={photo.url}>
         </iframe>}
       </Content>
